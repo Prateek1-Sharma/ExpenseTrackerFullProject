@@ -2,15 +2,13 @@ const express=require("express");
 const app=express();
 const bodyParser=require("body-parser")
 const cors=require("cors");
-const { log } = require("console");
+const expenseRoutes=require("./routes/expense");
+const dbConnect=require("./utils/database")
+const user=require("./models/user");
 app.use(cors());
 app.use(bodyParser.json());
-app.post("/userSignup",async(req,res)=>{
-console.log(req.body);
-console.log(res.statusCode);
-res.send("posted sucessfully")
-})
-
-app.listen(4000,()=>{
-    console.log("server running on port 4000 ");
+app.use(expenseRoutes);
+dbConnect.sync().then(()=>{
+    app.listen(4000);
+    console.log("Databse Connected");    
 })
