@@ -3,7 +3,7 @@ const db=require("../utils/database");
 
 const expenseOfUser=db.define("expenseofUser",{
     amount:{
-        type:sequelize.NUMERIC
+        type:sequelize.INTEGER
     },
     description:{type:sequelize.STRING
     },

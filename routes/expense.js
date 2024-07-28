@@ -10,4 +10,5 @@ router.get("/get/allExpenses",auth,expenseController.getExpenses)
 router.delete(`/:id/deleteExpenses`,expenseController.deleteExpense)
 router.get("/buyPremium",auth,expenseController.buyPrime)
 router.post("/updateStatus",auth,expenseController.transactionStatus)
+router.get("/showLeaderBoard",auth,expenseController.getLeaderBoard)
 module.exports=router
