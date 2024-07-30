@@ -146,13 +146,14 @@ inputElement.value="Show LeaderBoard"
 inputElement.onclick=async()=>{
   const token=localStorage.getItem("token");
   const res=await axios.get(`http://localhost:4000/showLeaderBoard`,{headers:{"Authorization":token}})
+  console.log(res);
   const userLeaderBoardArray = res.data;
   const LeaderBoard=document.getElementById("leaderboard");
         LeaderBoard.innerHTML="";
         LeaderBoard.innerHTML+="<h1>LeaderBoard</h1>"
         userLeaderBoardArray.forEach((user)=>{
         LeaderBoard.innerHTML+=
-        `<li>name:-${user.name},total Amount:-${user.Amount}</li>`
+        `<li>name:-${user.name},total Amount:-${user.TotalCost!==null?user.TotalCost:0}</li>`
         })
 }
 document.getElementById("message").appendChild(inputElement);

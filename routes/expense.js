@@ -12,4 +12,7 @@ router.get("/buyPremium",auth,expenseController.buyPrime)
 router.post("/updateStatus",auth,expenseController.transactionStatus)
 router.get("/showLeaderBoard",auth,expenseController.getLeaderBoard)
 router.get("/download",auth,expenseController.getDownload);
+router.use('/forgotpassword',expenseController.getForgotpassword)
+router.get('/resetpassword/:id',expenseController.getResetpassword)
+router.get('/updatepassword/:resetpasswordid',expenseController.getUpdatepassword)
 module.exports=router
