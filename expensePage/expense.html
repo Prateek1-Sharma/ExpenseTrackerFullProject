@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily expenses </title>
+</head>
+<body>
+    <form  id="expenseform" onsubmit="dailyExpenses(event)">
+      <label for="amount">Amount:</label>  
+      <input type="number" name="expenseAmount" id="amount">
+
+      <label for="Description">Description:</label>  
+      <input type="text" name="expenseDescription" id="Description">
+
+      <label for="category">Type Of Expense:</label>
+      <select  name="expenseType" id="category">
+        <option value="movies">Movies</option>
+        <option value="snacks">Snacks</option>
+        <option value="fuel">Fuel</option>
+        <option value="others">Others</option>
+      </select>  
+            <button type="submit">Submit</button>
+    </form>
+    <ul id="ul-list"></ul>
+    <div id="pagination"></div>
+    <button onclick="download()" id="downloadexpense" class="mydownload">Download File</button>
+    <button id="buy-premiumbtn" type="button" onclick="buyPremium(event)">Buy-Premium</button>
+    <div id="message"></div>
+    <div id="leaderboard"> </div>
+    
+</body>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+<script src="expense.js"></script>
+</html>

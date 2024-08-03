@@ -1,0 +1,115 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #555;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expense-form {
+    width: 100%;
+}
+
+.expense-form h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #00796b;
+}
+
+.expense-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00796b;
+    font-weight: bold;
+}
+
+.expense-form input, .expense-form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.expense-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.expense-form button:hover {
+    background-color: #004d40;
+}
+
+.expense-list-container {
+    width: 100%;
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+    margin-top: 1.5rem;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+    background: #f1f1f1;
+    padding: 1rem;
+}
+
+#ul-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ul-list li {
+    background: #e0f2f1;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: #00796b;
+}
+
+.expense-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-details span {
+    font-size: 0.9rem;
+    color: #004d40;
+}
+
+.expense-type {
+    background-color: #00796b;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
